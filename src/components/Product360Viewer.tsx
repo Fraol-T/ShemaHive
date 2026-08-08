@@ -140,10 +140,14 @@ export default function Product360Viewer({
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     const d = drag.current;
     if (!d || d.id !== e.pointerId) return;
-    const width = hostRef.current?.clientWidth ?? 1;
-    // One full drag across the viewer turns the product roughly once.
-    const perFrame = (width * 1.15) / frameCount;
+    // One full drag across the viewer turns the product roughly once. The
+    // floor matters: a zero-width host (hidden tab, pre-layout) would make
+    // this a divide by zero, and the resulting Infinity poisons the modulo
+    // into NaN, leaving the viewer stuck on a blank frame.
+    const width = hostRef.current?.clientWidth ?? 0;
+    const perFrame = Math.max((width * 1.15) / frameCount, 4);
     const steps = Math.round((e.clientX - d.x) / perFrame);
+    if (!Number.isFinite(steps)) return;
     setIndex(wrap(d.startIndex - steps, frameCount));
   };
 
