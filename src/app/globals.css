@@ -1,21 +1,51 @@
 @import "tailwindcss";
 
+/*
+  SHEMA HIVE palette.
+  Three brand colors; every neutral below is derived from navy blended into
+  beige (or beige into navy) and solved against a WCAG target — see the
+  contrast table in the project notes. Do not hand-edit these values without
+  re-running the check.
+
+  HARD RULE: gold is 1.71:1 on beige and 2.31:1 on white. It is a decoration
+  color only — hairlines, dividers, icon strokes, underline accents, and
+  filled CTAs with navy text on top. Never gold text on a light surface.
+*/
 @theme {
-  --color-canvas: #FAF7F2;
-  --color-brand-gold: #F5B853;
-  --color-brand-gold-hover: #E5A742;
-  --color-rose-mauve: #B08085;
-  --color-dark-charcoal: #1C1917;
-  --color-muted-stone: #78716C;
-  
+  /* brand */
+  --color-navy: #1F2A44;
+  --color-beige: #E8DCC8;
+  --color-gold: #C6A75E;
+  --color-gold-hover: #B59A5B;      /* gold +10% navy; navy on it 5.25:1 */
+
+  /* light surfaces */
+  --color-surface: #E8DCC8;         /* page background */
+  --color-surface-raised: #F5EFE6;  /* cards, panels, modals */
+  --color-surface-sunken: #DCD1C0;  /* wells, inputs, hover fills */
+  --color-line: #C4BCB0;            /* decorative hairline        1.39:1 */
+  --color-line-strong: #7C7D81;     /* input borders, focus rings 3.04:1 */
+
+  /* text on light surfaces */
+  --color-ink: #1F2A44;             /* primary        10.53:1 on beige */
+  --color-ink-muted: #565B68;       /* secondary       5.01:1 on beige */
+  --color-ink-subtle: #74767C;      /* large text only 3.35:1 on beige */
+
+  /* text and lines on navy surfaces */
+  --color-on-navy: #F7F3EC;         /* primary        12.89:1 on navy */
+  /* The header and bottom bar render navy at 95% over beige (#29334B), which
+     is lighter than the token. This is solved against that composite, not
+     against pure navy: 4.52:1 there, 5.12:1 on solid navy. */
+  --color-on-navy-muted: #969BA7;
+  --color-line-on-navy: #4B5161;
+
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
   --font-script: var(--font-caveat), cursive;
 }
 
 :root {
-  --background: #FAF7F2;
-  --foreground: #1C1917;
+  --background: var(--color-surface);
+  --foreground: var(--color-ink);
 }
 
 body {
@@ -72,14 +102,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7F2;
+  background: var(--color-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D6D3D1;
+  background: var(--color-line);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8A29E;
+  background: var(--color-line-strong);
 }
 
 /* Mobile scroll container — hide scrollbar */

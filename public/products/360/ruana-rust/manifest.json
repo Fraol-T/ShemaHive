@@ -1,0 +1,192 @@
+{
+  "frames": 36,
+  "size": 1000,
+  "clip": "rust",
+  "source": "Role_You_are_a_luxury_product (2).mp4",
+  "revolution": [
+    14,
+    95
+  ],
+  "steps": [
+    {
+      "index": 0,
+      "angle": 0.0,
+      "source_frame": 14
+    },
+    {
+      "index": 1,
+      "angle": 10.0,
+      "source_frame": 19
+    },
+    {
+      "index": 2,
+      "angle": 20.0,
+      "source_frame": 23
+    },
+    {
+      "index": 3,
+      "angle": 30.0,
+      "source_frame": 26
+    },
+    {
+      "index": 4,
+      "angle": 40.0,
+      "source_frame": 28
+    },
+    {
+      "index": 5,
+      "angle": 50.0,
+      "source_frame": 31
+    },
+    {
+      "index": 6,
+      "angle": 60.0,
+      "source_frame": 35
+    },
+    {
+      "index": 7,
+      "angle": 70.0,
+      "source_frame": 37
+    },
+    {
+      "index": 8,
+      "angle": 80.0,
+      "source_frame": 41
+    },
+    {
+      "index": 9,
+      "angle": 90.0,
+      "source_frame": 43
+    },
+    {
+      "index": 10,
+      "angle": 100.0,
+      "source_frame": 46
+    },
+    {
+      "index": 11,
+      "angle": 110.0,
+      "source_frame": 49
+    },
+    {
+      "index": 12,
+      "angle": 120.0,
+      "source_frame": 50
+    },
+    {
+      "index": 13,
+      "angle": 130.0,
+      "source_frame": 52
+    },
+    {
+      "index": 14,
+      "angle": 140.0,
+      "source_frame": 53
+    },
+    {
+      "index": 15,
+      "angle": 150.0,
+      "source_frame": 54
+    },
+    {
+      "index": 16,
+      "angle": 160.0,
+      "source_frame": 56
+    },
+    {
+      "index": 17,
+      "angle": 170.0,
+      "source_frame": 56
+    },
+    {
+      "index": 18,
+      "angle": 180.0,
+      "source_frame": 57
+    },
+    {
+      "index": 19,
+      "angle": 190.0,
+      "source_frame": 62
+    },
+    {
+      "index": 20,
+      "angle": 200.0,
+      "source_frame": 64
+    },
+    {
+      "index": 21,
+      "angle": 210.0,
+      "source_frame": 65
+    },
+    {
+      "index": 22,
+      "angle": 220.0,
+      "source_frame": 67
+    },
+    {
+      "index": 23,
+      "angle": 230.0,
+      "source_frame": 68
+    },
+    {
+      "index": 24,
+      "angle": 240.0,
+      "source_frame": 69
+    },
+    {
+      "index": 25,
+      "angle": 250.0,
+      "source_frame": 71
+    },
+    {
+      "index": 26,
+      "angle": 260.0,
+      "source_frame": 75
+    },
+    {
+      "index": 27,
+      "angle": 270.0,
+      "source_frame": 77
+    },
+    {
+      "index": 28,
+      "angle": 280.0,
+      "source_frame": 80
+    },
+    {
+      "index": 29,
+      "angle": 290.0,
+      "source_frame": 82
+    },
+    {
+      "index": 30,
+      "angle": 300.0,
+      "source_frame": 84
+    },
+    {
+      "index": 31,
+      "angle": 310.0,
+      "source_frame": 85
+    },
+    {
+      "index": 32,
+      "angle": 320.0,
+      "source_frame": 87
+    },
+    {
+      "index": 33,
+      "angle": 330.0,
+      "source_frame": 89
+    },
+    {
+      "index": 34,
+      "angle": 340.0,
+      "source_frame": 91
+    },
+    {
+      "index": 35,
+      "angle": 350.0,
+      "source_frame": 93
+    }
+  ]
+}
