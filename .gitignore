@@ -43,5 +43,3 @@ next-env.d.ts
 # Raw client photo drop. Byte-identical copies are committed and served from
 # public/products — this folder is just the staging location.
 /images
-
-# 360 frame sets still rendering are added explicitly once complete
