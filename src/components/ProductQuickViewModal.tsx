@@ -6,6 +6,7 @@ import { Check, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStore } from "@/context/StoreContext";
 import OrderButtons from "./OrderButtons";
+import Product360Viewer from "./Product360Viewer";
 import { PlaceholderChip } from "./PlaceholderNotice";
 
 export default function ProductQuickViewModal() {
@@ -81,23 +82,31 @@ export default function ProductQuickViewModal() {
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2">
-              {/*
-                MEDIA COLUMN — the 360 viewer replaces this <Image> for
-                colorways that carry a frame sequence (Part B, phase 6).
-              */}
+              {/* MEDIA COLUMN — 360 viewer where the colourway has a frame
+                  sequence, the normal photo everywhere else. */}
               <div className="relative h-72 sm:h-96 md:h-full md:min-h-[520px] bg-surface-sunken">
-                {displayImage && (
-                  <Image
-                    src={displayImage}
-                    alt={
-                      activeColorway
-                        ? `${quickViewProduct.name} in ${activeColorway.name}`
-                        : quickViewProduct.name
-                    }
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-center"
+                {activeColorway?.frames360 ? (
+                  <Product360Viewer
+                    key={activeColorway.frames360}
+                    frames={activeColorway.frames360}
+                    poster={`${activeColorway.frames360}/000.webp`}
+                    alt={`${quickViewProduct.name} in ${activeColorway.name}`}
+                    className="w-full h-full"
                   />
+                ) : (
+                  displayImage && (
+                    <Image
+                      src={displayImage}
+                      alt={
+                        activeColorway
+                          ? `${quickViewProduct.name} in ${activeColorway.name}`
+                          : quickViewProduct.name
+                      }
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover object-center"
+                    />
+                  )
                 )}
                 {quickViewProduct.badge && (
                   <span className="absolute top-4 left-4 px-3 py-1 bg-gold text-navy font-bold text-xs uppercase tracking-wider rounded-xs shadow-md border border-navy/20">

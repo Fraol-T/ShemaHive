@@ -21,10 +21,27 @@ export const PRODUCTS: Product[] = [
     image: "/products/232_0.jpg",
     badge: "HANDWOVEN",
     isNewArrival: true,
+    // Three of the four colourways have a 360 sequence; Mustard does not, so
+    // it exercises the standard-gallery fallback with real content.
     colorways: [
-      { name: "Charcoal", hex: "#2B2B2E", image: "/products/232_0.jpg" },
-      { name: "Olive", hex: "#5A6141", image: "/products/233_1.jpg" },
-      { name: "Rust", hex: "#B4551F", image: "/products/221_0.jpg" },
+      {
+        name: "Charcoal",
+        hex: "#2B2B2E",
+        image: "/products/232_0.jpg",
+        frames360: "/products/360/ruana-charcoal",
+      },
+      {
+        name: "Olive",
+        hex: "#5A6141",
+        image: "/products/233_1.jpg",
+        frames360: "/products/360/ruana-olive",
+      },
+      {
+        name: "Rust",
+        hex: "#B4551F",
+        image: "/products/221_0.jpg",
+        frames360: "/products/360/ruana-rust",
+      },
       { name: "Mustard", hex: "#C7A33A", image: "/products/222_1.jpg" },
     ],
   },
