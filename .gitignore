@@ -43,3 +43,8 @@ next-env.d.ts
 # Raw client photo drop. Byte-identical copies are committed and served from
 # public/products — this folder is just the staging location.
 /images
+
+# Internal project briefs and agent instructions — kept locally, not published
+/AGENTS.md
+/AGENTS-new-project.md
+/CLAUDE.md
